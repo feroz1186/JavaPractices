@@ -1,0 +1,18 @@
+package Stringpkg;
+
+public class replacechar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     String input ="Ferozkhanhas";
+     
+     String outpu = input.replace('h', ' ').trim();
+     String op=outpu.trim();
+     System.out.println(op);
+     
+     String ok = "a b c";
+     String output=ok.trim();
+     System.out.println(output);
+	}
+
+}

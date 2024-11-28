@@ -1,0 +1,42 @@
+package POJO;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.JsonObject;
+
+public class UpdateAttribute {
+
+	public static void main(String[] args) throws JsonMappingException, JsonProcessingException {
+		// TODO Auto-generated method stub
+		
+		String jsonString ="{\"cars\":{\"Nissan\":[{\"model\":\"Sentra\",\"doors\":4},{\"model\":\"Maxima\",\"doors\":4},{\"model\":\"Skyline\",\"doors\":2}],\"Ford\":[{\"model\":\"Taurus\",\"doors\":4},{\"model\":\"Escort\",\"doors\":4}]}}";
+		JSONObject jobj = new JSONObject(jsonString);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode nissanArray=mapper.readTree(jsonString).path("cars").path("Nissan");
+		
+		for(JsonNode car: nissanArray)
+		{
+			if(car.get("model").equals("Maxima"))
+			{
+				System.out.println(car.get("doors"));
+			}
+		}
+		
+		
+		
+		
+		
+		
+	   
+		
+		
+
+	}
+
+}

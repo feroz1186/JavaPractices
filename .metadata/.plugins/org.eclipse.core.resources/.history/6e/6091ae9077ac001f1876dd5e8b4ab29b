@@ -1,0 +1,14 @@
+package Stringpkg;
+
+public class replacechar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     String input ="Ferozkhanhas";
+     
+    String output = input.replaceAll("['h']", "");
+    
+    System.out.println(output);
+	}
+
+}

@@ -1,0 +1,25 @@
+package api;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
+public class Deserialize {
+
+	public static void main(String[] args) {
+		ObjectMapper mapper = new ObjectMapper();
+		
+		Response resp=RestAssured.given()
+		.baseUri("https://reqres.in/api/users/2")
+		.contentType(ContentType.JSON)
+		.when()
+		.post();
+		
+		String responsebdy=resp.body().asString();
+		mapper.readValue(responsebdy, null)
+
+	}
+
+}

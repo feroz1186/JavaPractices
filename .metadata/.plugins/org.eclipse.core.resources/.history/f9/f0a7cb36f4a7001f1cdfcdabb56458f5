@@ -1,0 +1,35 @@
+package stepDefinitions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class UberBookingSteps {
+	
+	@Given("User wants to select a car type as {string} from uber app")
+	public void user_wants_to_select_a_car_type_as_from_uber_app(String string) {
+	    
+	}
+
+	@When("User select a car type as {string} and pickuppoint is {string} and drop at {string}")
+	public void user_select_a_car_type_as_and_pickuppoint_is_and_drop_at(String string, String string2, String string3) {
+	   
+	}
+
+	@Then("Driver starts the journey")
+	public void driver_starts_the_journey() {
+	   
+	}
+
+	@Then("Driver ends the journey")
+	public void driver_ends_the_journey() {
+	   
+	}
+
+	@Then("User pays {int} USD to driver")
+	public void user_pays_usd_to_driver(Integer int1) {
+	    
+	}
+
+
+}

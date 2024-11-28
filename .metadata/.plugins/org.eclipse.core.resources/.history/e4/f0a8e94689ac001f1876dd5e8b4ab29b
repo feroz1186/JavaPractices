@@ -1,0 +1,12 @@
+package Stringpkg;
+
+public class splitTricky {
+
+	public static void main(String[] args) {
+		
+		String input = "a_b_cd";
+		input.split("_");
+
+	}
+
+}

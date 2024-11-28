@@ -1,0 +1,53 @@
+{
+  "cars": {
+    "Nissan": [
+      {
+        "model": "Sentra",
+        "doors": 4,
+        "owners": {
+          "name1": "feroz",
+          "name2": "khan",
+          "name3": "raju"
+        }
+      },
+      {
+        "model": "Maxima",
+        "doors": 4,
+        "owners": {
+          "name1": "selva",
+          "name2": "kumar",
+          "name3": "Ram"
+        }
+      },
+      {
+        "model": "Skyline",
+        "doors": 2,
+        "owners": {
+          "name1": "Rajan",
+          "name2": "Krishna",
+          "name3": "moorthy"
+        }
+      }
+    ],
+    "Ford": [
+      {
+        "model": "Taurus",
+        "doors": 4,
+        "owners": {
+          "name1": "saravana",
+          "name2": "perumal",
+          "name3": "senthil"
+        }
+      },
+      {
+        "model": "Escort",
+        "doors": 4,
+        "owners": {
+          "name1": "ganesan",
+          "name2": "moorthy",
+          "name3": "mahesh"
+        }
+      }
+    ]
+  }
+}

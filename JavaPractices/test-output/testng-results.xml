@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-26T15:29:27 IST" name="Default suite" finished-at="2024-11-26T15:29:39 IST" duration-ms="11200">
+    <groups>
+    </groups>
+    <test started-at="2024-11-26T15:29:27 IST" name="Default test" finished-at="2024-11-26T15:29:39 IST" duration-ms="11200">
+      <class name="SeleniumTricks.DataproviderParallel">
+        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:SeleniumTricks.DataproviderParallel@192c3f1e]" started-at="2024-11-26T15:29:27 IST" name="loginPage" data-provider="getData" finished-at="2024-11-26T15:29:39 IST" duration-ms="11154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[what]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[feroz]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:SeleniumTricks.DataproviderParallel@192c3f1e]" started-at="2024-11-26T15:29:27 IST" name="loginPage" data-provider="getData" finished-at="2024-11-26T15:29:39 IST" duration-ms="11166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hello]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[feroz]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+      </class> <!-- SeleniumTricks.DataproviderParallel -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

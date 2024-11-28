@@ -1,0 +1,29 @@
+package javaTricks;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class charOccurancesUsingStream {
+
+	public static void main(String[] args) {
+		
+		String input ="HelloWorld";
+		
+		Map<Character,Long> map =input.chars()
+		.mapToObj(m -> (char)m)
+		.filter(m -> m!=' ')
+		.collect(Collectors.groupingBy(m->m, Collectors.counting()));
+		
+		System.out.println(map);
+		
+		Map<String,Integer> age = new HashMap<>();
+		age.put("Feroz", 33);
+		age.put("Kumar", null);
+		
+		age.forEach((key,value) -> System.out.println(key+" "+value+"");
+	
+
+	}
+
+}

@@ -1,0 +1,52 @@
+package POJO;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.google.gson.JsonObject;
+
+public class UpdateAttribute {
+
+	public static void main(String[] args) throws JsonMappingException, JsonProcessingException, FileNotFoundException {
+		// TODO Auto-generated method stub
+		
+		//String jsonString ="{\"cars\":{\"Nissan\":[{\"model\":\"Sentra\",\"doors\":4},{\"model\":\"Maxima\",\"doors\":4},{\"model\":\"Skyline\",\"doors\":2}],\"Ford\":[{\"model\":\"Taurus\",\"doors\":4},{\"model\":\"Escort\",\"doors\":4}]}}";
+		ObjectMapper input = new ObjectMapper();
+		String jsonstring=input.writeValueAsString(new FileInputStream("car.json"));
+		System.out.println(jsonstring);
+		
+//				
+//		ObjectMapper mapper = new ObjectMapper();
+//		JsonNode rootNode = mapper.readTree(jsonString);
+//		JsonNode nissanArray=rootNode.path("cars").path("Nissan");
+//		
+//		for(JsonNode car: nissanArray)
+//		{
+//			if(car.path("model").textValue().equals("Skyline"))
+//			{
+//				((ObjectNode) car).put("doors","7");
+//			}
+//		}
+//		
+//		String updstrig=mapper.writerWithDefaultPrettyPrinter().writeValueAsString(rootNode);
+//		System.out.print(updstrig);
+		
+		
+		
+		
+	   
+		
+		
+
+	}
+
+}

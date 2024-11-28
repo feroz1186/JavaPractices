@@ -1,0 +1,39 @@
+package api;
+
+import org.openqa.selenium.json.Json;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import POJO.json;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
+public class Deserialize {
+
+	public static void main(String[] args) throws JsonMappingException, JsonProcessingException {
+		ObjectMapper mapper = new ObjectMapper();
+		
+		Response resp=RestAssured.given()
+		.baseUri("https://reqres.in/api/users/2")
+		.contentType(ContentType.JSON)
+		.when()
+		.post();
+		
+		String responsebdy=resp.body().asString();
+		json json=mapper.readValue(responsebdy, json.class);
+		
+		if(json.getData().getId().)
+		{
+			System.out.println("Name is missing");
+		}
+		else
+		{
+		  System.out.println("Name : "+json.getData().get);
+		}
+
+	}
+
+}

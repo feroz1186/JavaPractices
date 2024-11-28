@@ -1,0 +1,22 @@
+package api;
+
+import java.io.File;
+import java.io.IOException;
+
+import com.jayway.jsonpath.DocumentContext;
+import com.jayway.jsonpath.JsonPath;
+
+public class updateAttributeUsingJaywayPath {
+
+	public static void main(String[] args) throws IOException {
+		
+		 File file = new File("src/test/resources/car.json");
+		 DocumentContext context=JsonPath.parse(file);
+		 
+		 String jsonpath ="$.cars.Nissan[?(@.model=='Maxima')].doors";
+		 
+		 context.set(jsonpath, "9");
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package Stringpkg;
+
+public class immutable {
+
+	public static void main(String[] args) {
+		String s = "sachin";
+		System.out.println(s);
+		s.concat("tendul");
+		System.out.println(s);
+
+	}
+
+}

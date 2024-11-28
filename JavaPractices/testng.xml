@@ -1,0 +1,8 @@
+<suite name="Practice" data-provider-thread-count="2">
+<test name="Regression">
+<classes>
+<class name="SeleniumTricks.DataproviderParallel" />
+
+</classes>
+</test>
+</suite>

@@ -1,0 +1,25 @@
+package api;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class FetchFromCar {
+
+	public static void main(String[] args) throws IOException {
+		
+		File file = new File("src/test/resources/car.json");
+		FileInputStream fis = new FileInputStream(file);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		
+		String carstring=mapper.readTree(fis).toPrettyString();
+		System.out.println("Output "+carstring);
+		
+		
+
+	}
+
+}

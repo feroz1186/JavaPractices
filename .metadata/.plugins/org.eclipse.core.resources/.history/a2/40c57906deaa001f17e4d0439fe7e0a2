@@ -1,0 +1,39 @@
+package api;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class FetchFromCar {
+
+	public static void main(String[] args) throws IOException {
+		
+		File file = new File("src/test/resources/car.json");
+		FileInputStream fis = new FileInputStream(file);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		
+		String carstring=mapper.readTree(fis).toPrettyString();
+		System.out.println("Output "+carstring);
+		
+		JsonNode rootNode=mapper.readTree(carstring);
+		JsonNode nissan=rootNode.path("cars").path("Nissan");
+		JsonNode ownersarray = nissan.path("owners");
+		
+		
+		for(JsonNode owner: ownersarray)
+		{
+			if(owner.path("name2").textValue().equals("Krishna"))
+			{
+				String door= owner.get("name2").textValue();
+				System.out.println("Door size is : "+door);
+			}
+		}
+		
+
+	}
+
+}
